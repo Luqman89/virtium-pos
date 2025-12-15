@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId("user_id")->constrained()->cascadeOnDelete();
             $table->foreignId("product_id")->constrained()->cascadeOnDelete();
-            $table->integer("qty");
             $table->string("code")->unique();
+            $table->integer("qty");
             $table->decimal("buy_price");
             $table->decimal("sell_price");
             $table->decimal("amount_buy");
